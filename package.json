@@ -1,35 +1,49 @@
 {
-  "name": "hardhat-hackathon-boilerplate",
-  "version": "1.0.0",
-  "description": "A boilerplate repository to get you started with Hardhat and Ethereum development",
-  "directories": {
-    "test": "test"
-  },
-  "scripts": {
-    "test": "hardhat test"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/nomiclabs/hardhat-hackathon-boilerplate.git"
-  },
-  "keywords": [
-    "hardhat",
-    "ethereum",
-    "hackathon"
-  ],
-  "author": "Nomic Labs",
-  "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/nomiclabs/hardhat-hackathon-boilerplate/issues"
-  },
-  "homepage": "https://github.com/nomiclabs/hardhat-hackathon-boilerplate#readme",
-  "devDependencies": {
-    "@nomiclabs/hardhat-ethers": "^2.0.2",
-    "@nomiclabs/hardhat-waffle": "^2.0.1",
-    "chai": "^4.2.0",
-    "ethereum-waffle": "^3.1.1",
-    "ethers": "^5.0.0",
-    "hardhat": "^2.3.0",
-    "husky": "^4.2.5"
-  }
+    "name": "client",
+    "version": "0.1.0",
+    "private": true,
+    "homepage": "https://sharkam.github.io/blockchain-developer-bootcamp-final-project/",
+    "dependencies": {
+        "@ethersproject/units": "^5.5.0",
+        "@web3-react/core": "^6.1.9",
+        "@web3-react/injected-connector": "^6.0.7",
+        "ethers": "^5.6.1",
+        "i": "^0.3.7",
+        "immutability-helper": "^3.1.1",
+        "npm": "^8.0.0",
+        "react": "16.11.0",
+        "react-dom": "16.11.0",
+        "react-icons": "^4.3.1",
+        "react-router-dom": "^5.3.0",
+        "react-scripts": "4.0.3",
+        "react-spinners": "^0.11.0",
+        "react-tabs": "^3.2.3",
+        "styled-components": "^5.3.1"
+    },
+    "scripts": {
+        "start": "react-scripts start",
+        "build": "react-scripts build",
+        "test": "react-scripts test",
+        "eject": "react-scripts eject",
+        "predeploy": "npm run build",
+        "deploy": "gh-pages -d build"
+    },
+    "eslintConfig": {
+        "extends": "react-app"
+    },
+    "browserslist": {
+        "production": [
+            ">0.2%",
+            "not dead",
+            "not op_mini all"
+        ],
+        "development": [
+            "last 1 chrome version",
+            "last 1 firefox version",
+            "last 1 safari version"
+        ]
+    },
+    "devDependencies": {
+        "gh-pages": "^3.2.3"
+    }
 }
