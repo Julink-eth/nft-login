@@ -54,7 +54,7 @@ const MetamaskConnectButton = () => {
                         activate(injected, (e) => {
                             if (e instanceof UnsupportedChainIdError) {
                                 setContentError(
-                                    "Only Polygon mainnet is supported."
+                                    "Only Rinkeby network is supported."
                                 );
                             }
                         });
