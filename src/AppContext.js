@@ -3,7 +3,9 @@ const initialContext = {
     contentError: undefined,
     setContentError: () => {},
     isAuthorized: false,
-    setIsAuthorized: false,
+    setIsAuthorized: () => {},
+    apiLoading: false,
+    setApiLoading: () => {},
 };
 
 const appReducer = (state, { type, payload }) => {
@@ -17,6 +19,11 @@ const appReducer = (state, { type, payload }) => {
             return {
                 ...state,
                 isAuthorized: payload,
+            };
+        case "SET_API_LOADING":
+            return {
+                ...state,
+                apiLoading: payload,
             };
         default:
             return state;
@@ -36,6 +43,10 @@ export const AppContextProvider = ({ children }) => {
         isAuthorized: store.isAuthorized,
         setIsAuthorized: (authorized) => {
             dispatch({ type: "SET_IS_AUTHORIZED", payload: authorized });
+        },
+        apiLoading: store.apiLoading,
+        setApiLoading: (loading) => {
+            dispatch({ type: "SET_API_LOADING", payload: loading });
         },
     };
 

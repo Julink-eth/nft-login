@@ -7,11 +7,11 @@ import Text from "../../components/styled/Text";
 const Home = () => {
     const { active, account } = useWeb3React();
     const { initAuthorization } = useApi();
-    const { isAuthorized } = useAppContext();
+    const { isAuthorized, apiLoading } = useAppContext();
 
     useEffect(() => {
         let mounted = true;
-        mounted && account && initAuthorization(account);
+        mounted && initAuthorization(account);
         return () => {
             mounted = false;
         };
@@ -26,12 +26,14 @@ const Home = () => {
                 textAlign: "center",
             }}
         >
-            {active && isAuthorized && (
+            {apiLoading && <Text>Loading...</Text>}
+
+            {!apiLoading && isAuthorized && (
                 <Text>
                     Congrats! you've logged in to this page using an NFT
                 </Text>
             )}
-            {active && !isAuthorized && (
+            {!apiLoading && active && !isAuthorized && (
                 <Text>
                     You need NFT with contract
                     0x38240fa8521e0afc9e8d4c5e35acad1e8a57519c and id
