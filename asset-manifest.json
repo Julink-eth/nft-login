@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.js": "/nft-login/static/js/main.f19ced50.chunk.js",
-    "main.js.map": "/nft-login/static/js/main.f19ced50.chunk.js.map",
+    "main.js": "/nft-login/static/js/main.a0188ea0.chunk.js",
+    "main.js.map": "/nft-login/static/js/main.a0188ea0.chunk.js.map",
     "runtime-main.js": "/nft-login/static/js/runtime-main.3c216ba5.js",
     "runtime-main.js.map": "/nft-login/static/js/runtime-main.3c216ba5.js.map",
     "static/js/2.62b6090f.chunk.js": "/nft-login/static/js/2.62b6090f.chunk.js",
@@ -13,6 +13,6 @@
   "entrypoints": [
     "static/js/runtime-main.3c216ba5.js",
     "static/js/2.62b6090f.chunk.js",
-    "static/js/main.f19ced50.chunk.js"
+    "static/js/main.a0188ea0.chunk.js"
   ]
 }
